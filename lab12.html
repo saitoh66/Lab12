@@ -1,19 +1,78 @@
 <!DOCTYPE html>
-<html>
-<head><title>CS355 Lab 12 </title></head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CS355 Lab 13 </title>
+<style>		
+th {background-color:#4C4C4C; color:white; font-style:bold; text-align:left;}
+
+</style>
+
+<meta charset="UTF-8">
+</head>
 <body>
 
-<h1>CS355 Lab 12- HTML 101</h1>
+<div id="container" style="width:550px">
 
-<p>Paragraph.</p>
+<div id="header" style="background-color:#FFA500;">
+<img src="cs355lab13.png" alt="Lab13" height="42" width="250"></div>
 
-<p><b>Bold Paragraph.</b></p>
+<div id="menu" style="background-color:#FFD700;height:400px;width:100px;float:left;">
+<b>Menu</b><br>
+<a href="https://github.com/saitoh66/Lab12/">Github</a><br>
+<a href="http://www.cs.sonoma.edu/~haderman/cs355/">CS355</a><br>
+<a href="http://www.cs.sonoma.edu//">SSU CS Dept</a></div>
 
-<p><i>Italic Paragraph.</i></p>
+<div id="content" style="background-color:#EEEEEE;height:400px;width:450px;float:left;">
+<table style="width:450px">
+<tr>
+  <th>Number</th>
+  <th>Name</th> 
+  <th>Professor</th>
+</tr>
+<tr>
+  <td>CS355</td>
+  <td>Database Management System Design</td> 
+  <td>Haderman</td>
+</tr>
+<tr>
+  <td>CS415</td>
+  <td>Analysis of Algorithms</td> 
+  <td>Ledin</td>
+</tr>
+<tr>
+  <td>CS351</td>
+  <td>Computer Architecture</td> 
+  <td>Riviore</td>
+</tr>
+</table>
 
-<a href="http://www.epcgaming.us/">EPC</a>
+Top 3 things I've learned:<br>
+<ol>
+<li>MYSQL</li>
+<li>Database Management</li>
+<li>ERD</li>
+</ol>
+Three Things I want to learn:
+<ul>
+<li>Application Development</li>
+<li>Front-End Development</li>
+<li>PHP</li>
+</ul>
 
-<!--comment?-->
+<button onclick="message();">Click Me</button>
+<script>
+function message()
+{
+alert("Hello!");
+}
+</script>
+
+</div>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+Copyright &copy; Nate Danos 2014</div>
+
+</div>
 
 </body>
 </html>
