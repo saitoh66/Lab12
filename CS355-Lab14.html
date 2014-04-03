@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>CS355 Lab14</title>
+<link rel="stylesheet" type="text/css" href="CS355-Lab14.css">
+<style>
+		
+th {background-color:#4C4C4C; color:white; font-style:bold; text-align:left;}
+
+a:link {color:#FF0000;text-decoration:none;}    /* unvisited link */
+a:visited {color:#00FF00;text-decoration:none;} /* visited link */
+a:hover {color:#FF00FF;}   /* mouse over link */
+a:active {color:#0000FF;}  /* selected link */
+
+p.hidden {visibility:hidden}
+
+ul.b {list-style-type: square;}
+
+#customers
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#customers td, #customers th 
+{
+font-size:1em;
+border:1px solid #3333FF;
+padding:3px 7px 2px 7px;
+}
+#customers th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#3333FF;
+color:#ffffff;
+font-family:Arial,Helvetica,sans-serif;
+}
+#customers tr.alt td 
+{
+color:#000000;
+background-color:#33CCFF;
+}
+
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+
+
+
+</style>
+
+<meta charset="UTF-8">
+
+
+
+
+</head>
+<body>
+
+<div id="container" style="width:800px">
+
+<div id="header" class="center" style="background-color:#3333FF;">
+<img class="displayed" src="bf4-logo.png" alt="Lab14" height="42" width="250">
+</div>
+
+
+
+
+<div id="menu" style="background-color:#3333FF;height:756px;width:100px;float:left;">
+<b>Menu</b><br>
+<a href="http://battlelog.battlefield.com/bf4/">Battlelog</a><br>
+<a href="https://www.origin.com/en-us/store/-ANW.html">Origin</a><br>
+<a href="http://www.epcgaming.us/">EPC Clan</a></div>
+
+<div id="content" style="background-color:#EEEEEE;height:750px;width:694px;float:left;border-style:solid;">
+
+
+<table id="customers">
+<tr>
+  <th style="font-style:italic;">Team</th>
+  <th style="font-style:italic;">Name</th>
+  <th style="font-style:italic;">Country</th>
+</tr>
+<tr>
+<td>TeamEU</td>
+<td>Maria Anders</td>
+<td>Germany</td>
+</tr>
+<tr class="alt">
+<td>TeamEU</td>
+<td>Christina Berglund</td>
+<td>Sweden</td>
+</tr>
+<tr>
+<td>TeamNA</td>
+<td>Francisco Chang</td>
+<td>Mexico</td>
+</tr>
+<tr class="alt">
+<td>TeamEU</td>
+<td>Roland Mendel</td>
+<td>Austria</td>
+</tr>
+<tr>
+<td>TeamEU</td>
+<td>Helen Bennett</td>
+<td>UK</td>
+</tr>
+<tr class="alt">
+<td>TeamEU</td>
+<td>Philip Cramer</td>
+<td>Germany</td>
+</tr>
+<tr>
+<td>TeamNA</td>
+<td>Yoshi Tannamuri</td>
+<td>Canada</td>
+</tr>
+<tr class="alt">
+<td>TeamEU</td>
+<td>Giovanni Rovelli</td>
+<td>Italy</td>
+</tr>
+<tr>
+<td>TeamEU</td>
+<td>Simon Crowther</td>
+<td>UK</td>
+</tr>
+<tr class="alt">
+<td>TeamEU</td>
+<td>Marie Bertrand</td>
+<td>France</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+Top 3 Players:
+<ul class="b" style="padding:25px 50px;">
+<li>JackFrags</li>
+<li>LevelCap</li>
+<li>ChaBoyy</li>
+</ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("a").toggle();
+  });
+});
+</script>
+
+<button>No Links!</button>
+<br>
+
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+
+<a href="#" onclick="toggle_visibility('footer');">No Footer!</a>
+
+
+</div>
+
+<div id="footer" style="background-color:#3333FF;clear:both;text-align:center;">
+<p  class="hidden" >Copyright &copy; Nate Danos 2014</p>
+</div>
+
+</div>
+
+</body>
+</html>
