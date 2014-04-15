@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+  <head>
+    <link href="/CS355-Lab14.css" rel="stylesheet">
+	<meta charset="UTF-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#user-submit').click(function () {
+                var payload = {
+                    username: $('#user-name').val(),
+                    password: $('#user-password').val(),
+					<!-- country:  $('#user-country').val() new-->
+                };
+
+		console.log(payload);
+
+                $.ajax({
+                    url: "/createuser",
+                    type: "POST",
+                    contentType: "application/json",
+                    processData: false,
+                    data: JSON.stringify(payload),
+                    complete: function (data) {
+                        $('#output').html(data.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+	
+  </head>
+
+<div id="container">
+
+<div id="header">
+<h1>Registration</h1></div>
+
+
+<div id="menu">
+<b>Menu</b><br>
+    <a href="index/">Home Page</a><br />
+    <a href="getuser/">Find a User</a>
+</div>
+<div id="content">
+
+
+    <h3>Enter a username to enter into the database:</h3>
+    Username: <input id="user-name" type="text" /> <br />
+    Password: <input id="user-password" type="password" /> <br />
+	<!-- Country: <input id="user-country" type="text" /> <br /> -->
+    <input id="user-submit" type="submit" />
+    <p id="output"></p>
+</div>
+
+<div id="footer">
+Copyright &copy; Nate Danos</div>
+</div>
+
+</body>
+</html>
